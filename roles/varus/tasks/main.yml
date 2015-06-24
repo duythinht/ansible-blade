@@ -1,5 +1,5 @@
 - name: build docker images
-  docker_image: path=/vagrant name=varus state=build
+  docker_image: path={{ source_dir }} name=varus state=build
 
 - name: stop & remove container of varus api
   docker: image=varus name=varus_cont state=absent

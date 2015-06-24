@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: develop
   sudo: yes
   gather_facts: False
   roles:

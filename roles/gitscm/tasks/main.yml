@@ -1,6 +1,0 @@
-- name: make sure folder ower by user
-  file: name=/var/app owner={{ ansible_ssh_user }} mode=755
-
-- name: clone and pull varus source code
-  git: repo=ssh://git@git.chotot.org:2222/mobile-team/varus-api.git dest={{ source_dir }} accept_hostkey=yes track_submodules=yes version=develop 
-  sudo: no

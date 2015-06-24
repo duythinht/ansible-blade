@@ -2,4 +2,4 @@
   #file: name=/var/app owner={{ ansible_ssh_user }} mode=755
 
 - name: clone and pull varus source code
-  git: repo={{ source_repo }} dest={{ source_dir }} accept_hostkey=yes track_submodules=yes version=develop key_file={{ privite_key_path }}
+  git: repo={{ source_repo }} dest={{ source_dir }} accept_hostkey=yes track_submodules=yes version=develop key_file={{ privite_key_pair }}

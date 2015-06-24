@@ -4,5 +4,5 @@
   roles:
     - common
     - docker
-    - {role: gitscm, sudo: no}
+    - gitscm
     - varus

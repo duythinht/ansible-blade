@@ -1,5 +1,5 @@
 [varus_develop]
-10.60.3.31
+128.199.73.51
 [varus_develop:vars]
-ansible_ssh_user=thinh
+ansible_ssh_user=duythinht
 source_dir=/var/app/varus 

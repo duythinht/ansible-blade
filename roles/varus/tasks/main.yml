@@ -6,6 +6,3 @@
 
 - name: start new container of latest varus
   docker: image=varus name=varus_cont ports=8000:8000 state=started
-  #- name: run docker containter
-  #docker: name=varus_api_container image=varus state=started ports=8000:8000
-

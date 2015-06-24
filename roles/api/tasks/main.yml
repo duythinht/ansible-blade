@@ -1,0 +1,4 @@
+- name: install python prerequired
+  apt: name=libpq-dev state=present
+- name: install python packages
+  pip: requirements=/vagrant/requirements.txt

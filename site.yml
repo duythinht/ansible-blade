@@ -1,8 +1,0 @@
-- hosts: all
-  sudo: yes
-  gather_facts: False
-  roles:
-    - common
-    - docker
-    - api
-    - varus

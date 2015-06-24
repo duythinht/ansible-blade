@@ -1,5 +1,8 @@
-- hosts: coreos
+- hosts: all
+  sudo: yes
   gather_facts: False
   roles:
-    - coreos
-    - nginx
+    - common
+    - docker
+    - api
+    - varus

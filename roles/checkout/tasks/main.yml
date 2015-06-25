@@ -1,5 +1,13 @@
 #- name: make sure folder ower by user
   #file: name=/var/app owner={{ ansible_ssh_user }} mode=755
+- name: upload key pair to server
+  copy: src={{ lookup('env','HOME') }}/.ssh/{{ item }} dest=/home/{{ ansible_ssh_user }}/.ssh/{{ item }}
+  with_items:
+    - id_rsa
+    - id_rsa.pub
+
+- name: set mode to keypair
+  file: path=/home/{{ ansible_ssh_user }}/.ssh/id_rsa mode=700
 
 - name: clone and pull varus source code
-  git: repo={{ source_repo }} dest={{ source_dir }} accept_hostkey=yes track_submodules=yes version=develop key_file={{ private_key_pair }}
+  git: repo={{ source_repo }} dest={{ source_dir }} accept_hostkey=yes track_submodules=yes version=develop key_file=/home/{{ ansible_ssh_user }}/.ssh/id_rsa

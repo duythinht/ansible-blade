@@ -12,3 +12,7 @@
 
 - name: update pip to latest version
   pip: name=pip state=latest
+
+- name: setup ansible env
+  setup:
+

@@ -1,8 +1,0 @@
-- name: build docker images
-  docker_image: path={{ source_dir }} name=varus state=build
-
-- name: stop & remove container of varus api
-  docker: image=varus name=varus_cont state=absent
-
-- name: start new container of latest varus
-  docker: image=varus name=varus_cont ports=8000:8000 state=started

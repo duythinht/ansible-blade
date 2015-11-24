@@ -4,5 +4,3 @@
   roles:
     - common
     - docker
-    - checkout
-    - varus

@@ -2,4 +2,3 @@
   sudo: yes
   roles:
     - common
-    - api

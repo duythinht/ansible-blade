@@ -1,5 +1,0 @@
-- hosts: develop
-  sudo: yes
-  gather_facts: False
-  roles:
-    - checkout
